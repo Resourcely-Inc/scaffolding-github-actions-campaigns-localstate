@@ -1,0 +1,39 @@
+# Repo with one Terraform root module that uses tfvars
+# to instantiante in multiple environments.
+#
+# Assume the repo is stuctured like
+#
+# network.tf
+# main.tf
+# providers.tf
+# terraform.tf
+# variables.tf
+# global.tfvars
+# envs/
+#   | dev.tfvars
+#   | stage.tfvars
+#   | envs/prod.tfvars
+
+version: "2"
+
+terraform_config_roots:
+  - name: "Campaign tests"
+    path: .
+    default_file: main.tf
+    var_file: vars.tf
+    context:
+      tier: "0"
+      production: "false"
+    environments:
+      - name: dev
+        tfvars_file: envs/dev.tfvars
+      - name: prod
+        tfvars_file: envs/prod.tfvars
+        context:
+          production: "true"
+
+  - name: "Campaign test cfroot"
+    path: test_dir
+    default_file: main.tf
+    var_file: vars.tf
+
