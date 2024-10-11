@@ -35,4 +35,12 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   versioning_configuration {
     status = "Enabled"
   }
+
+resource "aws_s3_bucket" "bucket-1" {
+	bucket = "foo-bucket"
+        tags = {
+    		Name        = "My bucket"
+    		Environment = "Dev"
+  	}
+
 }
