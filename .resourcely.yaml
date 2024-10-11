@@ -27,13 +27,12 @@ terraform_config_roots:
     environments:
       - name: dev
         tfvars_file: envs/dev.tfvars
-	context: 
       - name: prod
         tfvars_file: envs/prod.tfvars
         context:
           production: "true"
 
-  - name: "Campaign not test"
+  - name: "Campaign test cfroot"
     path: test_dir
     default_file: main.tf
     var_file: vars.tf
