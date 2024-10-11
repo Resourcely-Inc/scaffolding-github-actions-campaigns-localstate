@@ -36,11 +36,43 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
     status = "Enabled"
   }
 
-resource "aws_s3_bucket" "bucket-1" {
-	bucket = "foo-bucket"
-        tags = {
-    		Name        = "My bucket"
-    		Environment = "Dev"
-  	}
+}
 
+resource "aws_s3_bucket" "bucket-1" {
+ bucket = "foo-bucket"
+   tags = {
+      Name        = "My bucket"
+      Environment = "Dev"
+   }
+}
+
+resource "aws_s3_bucket" "resourcely-bucket_VBTsxzFV4pziKNEi" {
+  bucket = "resourcely-bucket"
+  tags = {
+    owner = "infra"
+  }
+}
+
+resource "aws_s3_bucket_public_access_block" "resourcely-bucket_VBTsxzFV4pziKNEi" {
+  bucket                  = aws_s3_bucket.resourcely-bucket_VBTsxzFV4pziKNEi.id
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_ownership_controls" "resourcely-bucket_VBTsxzFV4pziKNEi" {
+  bucket = aws_s3_bucket.resourcely-bucket_VBTsxzFV4pziKNEi.id
+
+  rule {
+    object_ownership = "BucketOwnerEnforced"
+  }
+}
+
+resource "aws_s3_bucket_versioning" "resourcely-bucket_VBTsxzFV4pziKNEi" {
+  bucket = aws_s3_bucket.resourcely-bucket_VBTsxzFV4pziKNEi.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
 }
