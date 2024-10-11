@@ -22,13 +22,13 @@ terraform_config_roots:
     default_file: main.tf
     var_file: vars.tf
     context:
-      tier: "0"
+      ans1: "foo"
       production: "false"
     environments:
       - name: dev
-        tfvars_file: envs/dev.tfvars
+        tfvars_file: dev.tfvars
       - name: prod
-        tfvars_file: envs/prod.tfvars
+        tfvars_file: prod.tfvars
         context:
           production: "true"
 
