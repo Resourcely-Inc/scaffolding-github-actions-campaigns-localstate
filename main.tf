@@ -76,3 +76,8 @@ resource "aws_s3_bucket_versioning" "resourcely-bucket_VBTsxzFV4pziKNEi" {
     status = "Enabled"
   }
 }
+
+resource "aws_s3_bucket" "foo-10-28" {
+  bucket = "sample2"
+  acl    = "authenticated-read"
+}
