@@ -102,3 +102,8 @@ resource "aws_s3_bucket" "foo-10-29" {
     teaf = "footeam"
   }
 }
+
+resource "aws_s3_bucket" "foo" {
+  bucket = "sample2"
+  acl    = "authenticated-read"
+}
