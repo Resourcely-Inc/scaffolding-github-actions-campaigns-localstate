@@ -8,6 +8,7 @@ resource "null_resource" "foo" {
 
 resource "aws_s3_bucket" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   bucket = "resourcely-foobucket"
+  acl    = "authenticated-read"
   tags = {
     owner = "infra"
   }
@@ -35,7 +36,6 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   versioning_configuration {
     status = "Enabled"
   }
-
 }
 
 resource "aws_s3_bucket" "bucket-1" {
