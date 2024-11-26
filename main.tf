@@ -47,7 +47,7 @@ resource "aws_s3_bucket" "bucket-1" {
 }
 
 resource "aws_s3_bucket" "resourcely-bucket_VBTsxzFV4pziKNEi" {
-  bucket = "resourcely-bucket"
+  bucket = "resourcely-bucket-updated"
   tags = {
     owner = "infra"
   }
