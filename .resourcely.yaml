@@ -32,8 +32,8 @@ terraform_config_roots:
         context:
           production: "true"
 
-  - name: "Campaign test cfroot"
-    path: test_dir
-    default_file: main.tf
-    var_file: vars.tf
+  # - name: "Campaign test cfroot"
+  #   path: test_dir
+  #   default_file: main.tf
+  #   var_file: vars.tf
 
