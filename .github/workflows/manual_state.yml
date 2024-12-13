@@ -48,4 +48,3 @@ jobs:
             --state_file "/data/tf-state-files/${{inputs.stateFileName}}.tfstate" \
             --repo_url "${{inputs.repoURL}}"  \
             --config_root_path "${{inputs.configRootPath}}" \ 
-            --log ${{ runner.debug == '1' && 'debug' || 'info' }}
