@@ -26,7 +26,8 @@ on:
         default: "https://api.dev.resourcely.io"
       resourcely_api_token:
         description: 'api to access resourcely api'
-        required: true
+        required: false
+        default: ${{ secrets.RESOURCELY_API_TOKEN }}
 
 jobs:
   resourcely-state-eval:
