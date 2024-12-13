@@ -16,6 +16,10 @@ on:
         description: 'filename for specific state to evaluate'
         required: false
         default: 'state'
+      docker_tag:
+        description: 'tag of the resourcely-cli Docker image to use'
+        required: false
+        default: 'latest'
 
 jobs:
   resourcely-state-eval:
@@ -29,7 +33,7 @@ jobs:
         shell: bash
         if: success()
         run: |
-          docker pull ghcr.io/resourcely-inc/resourcely-cli:${{ inputs.docker_tag }};
+          docker pull ghcr.io/resourcely-inc/resourcely-cli:${{ inputs.docker_tag }}
           docker run --rm \
             -v "$(pwd)/${{ inputs.tf_state_directory}}:/data/tf-state-files" \
             -e RESOURCELY_API_TOKEN="${{ inputs.resourcely_api_token }}" \
@@ -40,4 +44,4 @@ jobs:
             --repo_url "${{inputs.repoURL}}"  \
             --config_root_path "${{inputs.configRootPath}}" \ 
             --publish_findings true 
-            --log ${{ runner.debug == '1' && 'debug' || 'info' }};
+            --log ${{ runner.debug == '1' && 'debug' || 'info' }}
