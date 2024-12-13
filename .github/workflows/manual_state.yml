@@ -18,9 +18,6 @@ on:
         default: 'state'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
   resourcely-state-eval:
     runs-on: ubuntu-latest
 
