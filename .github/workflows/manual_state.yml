@@ -24,6 +24,9 @@ on:
         description: 'url for the resourcely api'
         required: false
         default: "https://api.dev.resourcely.io"
+      resourcely_api_token:
+        description: 'api to access resourcely api'
+        required: true
 
 jobs:
   resourcely-state-eval:
