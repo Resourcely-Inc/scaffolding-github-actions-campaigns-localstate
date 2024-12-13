@@ -23,7 +23,7 @@ on:
       resourcely_api_host:
         description: 'url for the resourcely api'
         required: false
-        default: "https://dev.api.resourcely.io"
+        default: "https://api.dev.resourcely.io"
 
 jobs:
   resourcely-state-eval:
