@@ -20,6 +20,10 @@ on:
         description: 'tag of the resourcely-cli Docker image to use'
         required: false
         default: 'latest'
+      resourcely_api_host:
+        description: 'url for the resourcely api'
+        required: false
+        default: "https://dev.api.resourcely.io"
 
 jobs:
   resourcely-state-eval:
