@@ -1,4 +1,4 @@
-name: Manually Triggered State 
+name: Manually Triggered State Evaluation
 on:
   workflow_dispatch:
     inputs:
