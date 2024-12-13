@@ -1,4 +1,4 @@
-name: Manually Triggered State 
+name: Manually Triggered State Evaluation
 on:
   workflow_dispatch:
     inputs:
@@ -16,11 +16,16 @@ on:
         description: 'filename for specific state to evaluate'
         required: false
         default: 'state'
+      docker_tag:
+        description: 'tag of the resourcely-cli Docker image to use'
+        required: false
+        default: 'dev-latest'
+      resourcely_api_host:
+        description: 'url for the resourcely api'
+        required: false
+        default: "https://api.dev.resourcely.io"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
   resourcely-state-eval:
     runs-on: ubuntu-latest
 
@@ -32,15 +37,15 @@ jobs:
         shell: bash
         if: success()
         run: |
-          docker pull ghcr.io/resourcely-inc/resourcely-cli:${{ inputs.docker_tag }};
+          docker pull ghcr.io/resourcely-inc/resourcely-cli:${{ inputs.docker_tag }}
           docker run --rm \
             -v "$(pwd)/${{ inputs.tf_state_directory}}:/data/tf-state-files" \
-            -e RESOURCELY_API_TOKEN="${{ inputs.resourcely_api_token }}" \
+            -e RESOURCELY_API_TOKEN="${{ secrets.resourcely_api_token }}" \
             -e RESOURCELY_BETA_FEATURES=BETA_FEATURE_CAMPAIGNS \
             ghcr.io/resourcely-inc/resourcely-cli:${{ inputs.docker_tag }} evaluate_state \
+            --publish_findings true \
             --api_host "${{ inputs.resourcely_api_host }}" \
             --state_file "/data/tf-state-files/${{inputs.stateFileName}}.tfstate" \
             --repo_url "${{inputs.repoURL}}"  \
             --config_root_path "${{inputs.configRootPath}}" \ 
-            --publish_findings true 
-            --log ${{ runner.debug == '1' && 'debug' || 'info' }};
+            --log ${{ runner.debug == '1' && 'debug' || 'info' }}
