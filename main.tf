@@ -6,8 +6,8 @@ resource "null_resource" "foo" {
   }
 }
 
-resource "aws_s3_bucket" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
-  bucket = "resourcely-foobucket"
+resource "aws_s3_bucket" "resourcely-foobucket_ccYTHXSP6VpVTaLdaaaa" {
+  bucket = "resourcely-foobucketaaaaa"
   tags = {
     owner = "infra"
   }
@@ -38,7 +38,7 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
 
 }
 
-resource "aws_s3_bucket" "bucket-1" {
+resource "aws_s3_bucket" "bucket-1s" {
  bucket = "resourcely-bucket"
    tags = {
       Name        = "My bucket"
@@ -79,7 +79,7 @@ resource "aws_s3_bucket_versioning" "resourcely-bucket_VBTsxzFV4pziKNEi" {
 
 resource "aws_s3_bucket" "foo-10-28" {
   bucket = "sample2"
-  acl    = "authenticated-read"
+  acl    = "authenticated-readaa"
 }
 
 resource "aws_s3_bucket" "foo-10-28-2" {
@@ -88,7 +88,7 @@ resource "aws_s3_bucket" "foo-10-28-2" {
 }
 
 resource "aws_s3_bucket" "foo-10-28-3" {
-  bucket = "sample5"
+  bucket = "sample5a"
   acl    = "authenticated-read"
   tags = {
     team = "foo"
