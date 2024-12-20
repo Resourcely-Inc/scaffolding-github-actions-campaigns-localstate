@@ -5,7 +5,7 @@ resource "null_resource" "foo" {
     bar = var.project
   }
 }
-
+// hey
 resource "aws_s3_bucket" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   bucket = "resourcely-foobucket"
   tags = {
