@@ -38,14 +38,15 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
 
 }
 
-resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTss" {
-  bucket = aws_s3_bucket.resourcely-foobucket_ccYTHXSP6VpVTaLd.id
+resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTanc" {
+  bucket = aws_s3_bucket.resourcely-foobucket_ccYTHXSP6VpVTanc.id
 
   versioning_configuration {
     status = "Enabled"
   }
 
 }
+
 
 resource "aws_s3_bucket" "bucket-1s" {
  bucket = "resourcely-bucket"
