@@ -102,3 +102,21 @@ resource "aws_s3_bucket" "foo-10-29" {
     teaf = "footeam"
   }
 }
+
+
+resource "aws_s3_bucket" "foo-10-292" {
+  bucket = "sample2-10-292"
+  acl    = "authenticated-read"
+  tags = {
+    teaf = "footeam"
+  }
+}
+
+
+resource "aws_s3_bucket" "foo-10-292" {
+  bucket = "sample2-10-292"
+  acl    = "authenticated-read"
+  tags = {
+    teaf = "footeam"
+  }
+}
