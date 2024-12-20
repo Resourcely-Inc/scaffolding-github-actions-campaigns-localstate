@@ -36,6 +36,10 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
     status = "Enabled"
   }
 
+  versioning_configuration {
+    status = "Disabled"
+  }
+
 }
 
 resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTanc" {
