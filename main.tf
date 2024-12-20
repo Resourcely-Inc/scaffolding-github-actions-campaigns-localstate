@@ -33,13 +33,8 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   bucket = aws_s3_bucket.resourcely-foobucket_ccYTHXSP6VpVTaLd.id
 
   versioning_configuration {
-    status = "Enabled"
-  }
-
-  versioning_configuration {
     status = "Disabled"
   }
-
 }
 
 resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTanc" {
