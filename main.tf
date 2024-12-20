@@ -113,8 +113,8 @@ resource "aws_s3_bucket" "foo-10-292" {
 }
 
 
-resource "aws_s3_bucket" "foo-10-292" {
-  bucket = "sample2-10-292"
+resource "aws_s3_bucket" "foo-10-2924" {
+  bucket = "sample2-10-2924"
   acl    = "authenticated-read"
   tags = {
     teaf = "footeam"
