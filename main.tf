@@ -7,7 +7,7 @@ resource "null_resource" "foo" {
 }
 
 resource "aws_s3_bucket" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
-  bucket = "resourcely-foobucket"
+  bucket = "resourcely-foobucket2"
   tags = {
     owner = "infra"
   }
