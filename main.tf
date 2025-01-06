@@ -73,7 +73,7 @@ resource "aws_s3_bucket_versioning" "resourcely-bucket_VBTsxzFV4pziKNEi" {
   bucket = aws_s3_bucket.resourcely-bucket_VBTsxzFV4pziKNEi.id
 
   versioning_configuration {
-    status = "Enabled"
+    status = "Disabled"
   }
 }
 
