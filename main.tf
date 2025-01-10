@@ -39,7 +39,7 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
 }
 
 resource "aws_s3_bucket" "bucket-1" {
- bucket = "resourcely-foo-bucket-2"
+ bucket = "not-resourcely-foo-bucket-2"
    tags = {
       Name        = "My bucket"
       Environment = "Dev"
