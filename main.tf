@@ -83,7 +83,7 @@ resource "aws_s3_bucket" "foo-10-28" {
 }
 
 resource "aws_s3_bucket" "foo-10-28-2" {
-  bucket = "sample3"
+  bucket = "resourcely-sample3"
   acl    = "authenticated-read"
 }
 
