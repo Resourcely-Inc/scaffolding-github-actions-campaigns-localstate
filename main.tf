@@ -79,7 +79,6 @@ resource "aws_s3_bucket_versioning" "resourcely-bucket_VBTsxzFV4pziKNEi" {
 
 resource "aws_s3_bucket" "foo-10-28" {
   bucket = "sample2"
-  acl    = "authenticated-read"
 }
 
 resource "aws_s3_bucket" "foo-10-28-2" {
