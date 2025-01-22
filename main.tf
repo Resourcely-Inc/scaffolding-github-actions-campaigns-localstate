@@ -96,7 +96,7 @@ resource "aws_s3_bucket" "foo-10-28-3" {
 }
 
 resource "aws_s3_bucket" "foo-10-29" {
-  bucket = "sample2-10-29"
+  bucket = "resourcely-sample2-10-29"
   acl    = "authenticated-read"
   tags = {
     teaf = "footeam"
