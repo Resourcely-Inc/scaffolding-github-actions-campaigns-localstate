@@ -88,7 +88,7 @@ resource "aws_s3_bucket" "foo-10-28-2" {
 }
 
 resource "aws_s3_bucket" "foo-10-28-3" {
-  bucket = "sample5"
+  bucket = "resourcely-sample5"
   acl    = "authenticated-read"
   tags = {
     team = "foo"
