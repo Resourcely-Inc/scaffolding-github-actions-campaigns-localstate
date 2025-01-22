@@ -87,7 +87,7 @@ resource "aws_s3_bucket" "foo-10-28-2" {
   acl    = "authenticated-read"
 }
 
-...
+......
 
 resource "aws_s3_bucket" "foo-10-28-3" {
   bucket = "sample5"
