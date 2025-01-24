@@ -13,9 +13,6 @@ resource "aws_s3_bucket" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   }
 }
 
-...
-~~~
-
 resource "aws_s3_bucket_public_access_block" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   bucket                  = aws_s3_bucket.resourcely-foobucket_ccYTHXSP6VpVTaLd.id
   block_public_acls       = true
@@ -81,7 +78,7 @@ resource "aws_s3_bucket_versioning" "resourcely-bucket_VBTsxzFV4pziKNEi" {
 }
 
 resource "aws_s3_bucket" "foo-10-28" {
-  bucket = "sample2"
+  bucket = "resourcely-sample2"
   acl    = "authenticated-read"
 }
 
