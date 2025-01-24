@@ -13,6 +13,8 @@ resource "aws_s3_bucket" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   }
 }
 
+...
+
 resource "aws_s3_bucket_public_access_block" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
   bucket                  = aws_s3_bucket.resourcely-foobucket_ccYTHXSP6VpVTaLd.id
   block_public_acls       = true
