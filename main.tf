@@ -53,7 +53,7 @@ resource "aws_s3_bucket" "resourcely-bucket_VBTsxzFV4pziKNEi" {
   }
 }
 
-...
+......
 
 resource "aws_s3_bucket_public_access_block" "resourcely-bucket_VBTsxzFV4pziKNEi" {
   bucket                  = aws_s3_bucket.resourcely-bucket_VBTsxzFV4pziKNEi.id
