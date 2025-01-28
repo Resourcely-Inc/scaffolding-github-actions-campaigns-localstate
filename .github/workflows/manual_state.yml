@@ -41,7 +41,6 @@ jobs:
           docker run --rm \
             -v "$(pwd)/${{ inputs.tf_state_directory}}:/data/tf-state-files" \
             -e RESOURCELY_API_TOKEN="${{ secrets.resourcely_api_token }}" \
-            -e RESOURCELY_BETA_FEATURES=BETA_FEATURE_CAMPAIGNS \
             ghcr.io/resourcely-inc/resourcely-cli:${{ inputs.docker_tag }} evaluate_state \
             --publish_findings true \
             --api_host "${{ inputs.resourcely_api_host }}" \
