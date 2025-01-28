@@ -39,7 +39,7 @@ resource "aws_s3_bucket_versioning" "resourcely-foobucket_ccYTHXSP6VpVTaLd" {
 }
 
 resource "aws_s3_bucket" "bucket-1" {
- bucket = "foo-bucket"
+ bucket = "resourcely-foo-bucket"
    tags = {
       Name        = "My bucket"
       Environment = "Dev"
@@ -78,17 +78,17 @@ resource "aws_s3_bucket_versioning" "resourcely-bucket_VBTsxzFV4pziKNEi" {
 }
 
 resource "aws_s3_bucket" "foo-10-28" {
-  bucket = "sample2"
+  bucket = "resourcely-sample2"
   acl    = "authenticated-read"
 }
 
 resource "aws_s3_bucket" "foo-10-28-2" {
-  bucket = "sample3"
+  bucket = "resourcely-sample3"
   acl    = "authenticated-read"
 }
 
 resource "aws_s3_bucket" "foo-10-28-3" {
-  bucket = "sample5"
+  bucket = "resourcely-sample5"
   acl    = "authenticated-read"
   tags = {
     team = "foo"
@@ -96,7 +96,7 @@ resource "aws_s3_bucket" "foo-10-28-3" {
 }
 
 resource "aws_s3_bucket" "foo-10-29" {
-  bucket = "sample2-10-29"
+  bucket = "resourcely-sample2-10-29"
   acl    = "authenticated-read"
   tags = {
     teaf = "footeam"
