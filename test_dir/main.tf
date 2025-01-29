@@ -6,7 +6,7 @@ resource "null_resource" "foo-bar-baz" {
   }
 }
 
-resource "aws_s3_bucket" "foo1" {
+resource "aws_s3_bucket" "foo" {
   bucket = "test"
   tags = {
     teaf = "footeam"
